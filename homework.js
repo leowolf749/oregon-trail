@@ -11,6 +11,9 @@ let georpe = makeTraveler('georpe');
 console.log(thom);
 console.log(georpe); // Not a typo
 
+
+
+
 function makeWagon(capacity) {
     return {
         passengers: [],
@@ -21,9 +24,23 @@ let wagon = makeWagon(5);
 
 console.log(wagon);
 
-function hunt(traveler) {
 
+
+
+function hunt(traveler) {
+    if (Math.random() >= 0.5) {
+        traveler.food = traveler.food + 100;
+        return 'Successful hunt, ' + traveler.name + 's ' + 'food stock is now ' +traveler.food;
+    } else {
+        traveler.food = traveler.food;
+        return 'Hunt was unsuccessful, ' + traveler.name + ' sucks. '
+    }
 }
+console.log(hunt(thom));
+console.log(hunt(georpe));
+
+
+
 
 function eat(traveler) {
     traveler.food = traveler.food - 20;
@@ -35,3 +52,16 @@ function eat(traveler) {
 }
 console.log(eat(thom));
 console.log(eat(georpe));
+
+
+
+
+function join(wagon, traveler){
+
+}
+
+
+
+function food(wagon) {
+    
+}
