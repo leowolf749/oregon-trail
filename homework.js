@@ -57,10 +57,14 @@ console.log(eat(georpe));
 
 
 function join(wagon, traveler){
-
+    let totalPeople = wagon.passengers.length;
+    if ((totalPeople + 1) <= wagon.capacity) {
+        wagon.passengers.push(traveler);
+    }
+    return wagon;
 }
-
-
+console.log(join(wagon, thom));
+console.log(join(wagon, georpe));
 
 function food(wagon) {
     
