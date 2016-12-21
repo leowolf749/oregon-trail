@@ -66,6 +66,14 @@ function join(wagon, traveler){
 console.log(join(wagon, thom));
 console.log(join(wagon, georpe));
 
-function food(wagon) {
-    
+
+
+function quarantine(traveler) {
+    if (traveler.food < 20) {
+        return true;
+    } else {
+        return false;
+    }
 }
+console.log(quarantine(thom));
+console.log(quarantine(georpe));
