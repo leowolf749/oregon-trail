@@ -68,12 +68,12 @@ console.log(join(wagon, georpe));
 
 
 
-function quarantine(traveler) {
-    if (traveler.food < 20) {
-        return true;
-    } else {
-        return false;
+function quarantine(wagon) {
+    for (let i = 0; i < wagon.passengers.length; i++) { 
+        if (wagon.passengers[i].isHealthy !== true) {
+            return true;
+        } 
     }
+    return false;
 }
-console.log(quarantine(thom));
-console.log(quarantine(georpe));
+console.log(quarantine(wagon));
